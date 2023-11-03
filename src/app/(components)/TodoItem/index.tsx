@@ -13,7 +13,7 @@ function TodoItem({ item }: TodoItemProps) {
     <div className="card bg-base-100 shadow-xl w-full">
       <div className="card-body">
         <h2 className="card-title">{item.title}</h2>
-        <p>{item.description}</p>
+        <p className="break-words">{item.description}</p>
       </div>
     </div>
   );
