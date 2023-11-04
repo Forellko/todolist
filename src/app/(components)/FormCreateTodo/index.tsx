@@ -7,7 +7,7 @@ import { useRouter } from 'next/navigation';
 export default function FormCreateTodo() {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
-  const { push } = useRouter();
+  const { push, refresh } = useRouter();
 
   return (
     <div>
@@ -30,6 +30,7 @@ export default function FormCreateTodo() {
         onClick={async () => {
           createTodo({ title, description });
           push('/');
+          refresh();
         }}
         className="btn btn-active btn-primary w-full mt-5"
       >
