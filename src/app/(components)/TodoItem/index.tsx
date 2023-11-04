@@ -1,14 +1,7 @@
+import { Todo } from '@prisma/client';
 import React from 'react';
 
-interface TodoItemProps {
-  item: {
-    id: string;
-    title: string;
-    description: string;
-  };
-}
-
-function TodoItem({ item }: TodoItemProps) {
+function TodoItem({ item }: { item: Todo }) {
   return (
     <div className="card bg-base-100 shadow-xl w-full min-h-[300px]">
       <div className="card-body">
