@@ -1,3 +1,5 @@
+'use client';
+import { useSession, signIn, signOut } from 'next-auth/react';
 import Link from 'next/link';
 import React from 'react';
 import { AiOutlinePlus } from 'react-icons/ai';
@@ -25,7 +27,15 @@ function Navbar() {
           tabIndex={0}
           className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
         >
-          <li>Log in</li>
+          <li>
+            <button
+              onClick={() => {
+                signIn();
+              }}
+            >
+              Sign In
+            </button>
+          </li>
         </ul>
       </div>
     </div>
