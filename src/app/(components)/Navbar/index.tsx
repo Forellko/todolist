@@ -15,10 +15,18 @@ function Navbar() {
           todolist
         </Link>
       </div>
-      <div className="avatar placeholder p-5">
-        <div className="bg-neutral-focus text-neutral-content rounded-full w-16">
-          <span className="text-3xl">K</span>
-        </div>
+      <div className="dropdown dropdown-bottom">
+        <label tabIndex={0} className="m-1">
+          <div className="avatar placeholder p-5">
+            <div className="bg-neutral-focus text-neutral-content rounded-full w-16"></div>
+          </div>
+        </label>
+        <ul
+          tabIndex={0}
+          className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
+        >
+          <li>Log in</li>
+        </ul>
       </div>
     </div>
   );
