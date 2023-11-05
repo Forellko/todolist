@@ -15,6 +15,11 @@ function Navbar() {
           todolist
         </Link>
       </div>
+      <div className="avatar placeholder p-5">
+        <div className="bg-neutral-focus text-neutral-content rounded-full w-16">
+          <span className="text-3xl">K</span>
+        </div>
+      </div>
     </div>
   );
 }
